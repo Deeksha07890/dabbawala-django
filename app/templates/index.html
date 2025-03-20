@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+Dabbawala - Choose Login
+{% endblock title %}
+{% block header %}
+<h1>Welcome to Dabbawala</h1>
+<p>Your efficient lunchbox delivery system</p>
+{% endblock header %}
+    {% block main %}
+    <section class="login-options">
+        <h2>Select your role to log in</h2>
+        <button onclick="redirectTo('admin')">Admin</button>
+        <button onclick="redirectTo('kitchen')">Kitchen</button>
+        <button onclick="redirectTo('delivery')">Delivery Partner</button>
+        <button onclick="redirectTo('customer')">Customer</button>
+    </section>
+    {% endblock main %}
+
+    {% block script %}
+    <script>
+        function redirectTo(role) {
+            window.location.href = "login/";
+        }
+    </script>
+    {% endblock script %}
+    

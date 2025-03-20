@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabbawala - Register</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #ff5e62;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff5e62;
+            color: white;
+        }
+        .error {
+            color: yellow;
+            font-size: 14px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dabbawala - Register</h1>
+        <p>Create your account</p>
+    </header>
+    <main>
+        <div class="register-container">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email ID" required>
+            <input type="number" id="phone" placeholder="Phone Number" required>
+            <p class="error" id="phoneError"></p>
+            <input type="password" id="password" placeholder="Password" required>
+            <p class="error" id="passwordError"></p>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <p class="error" id="confirmPasswordError"></p>
+            <input type="image" id="image" placeholder="Delivery Licence" required>
+            <button onclick="validateForm()">Register</button>
+        </div>
+    </main>
+
+    <script>
+        function validateForm() {
+            let phone = document.getElementById("phone").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            let phoneError = document.getElementById("phoneError");
+            let passwordError = document.getElementById("passwordError");
+            let confirmPasswordError = document.getElementById("confirmPasswordError");
+
+            phoneError.innerText = "";
+            passwordError.innerText = "";
+            confirmPasswordError.innerText = "";
+
+            let isValid = true;
+
+            // Validate phone number (should be 10 digits)
+            if (!/^\d{10}$/.test(phone)) {
+                phoneError.innerText = "Phone number must be exactly 10 digits.";
+                isValid = false;
+            }
+
+            // Validate password (at least 1 letter, 1 number, 1 special character, min 6 chars)
+            let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+            if (!passwordRegex.test(password)) {
+                passwordError.innerText = "Password must have 1 letter, 1 number, 1 special character, and be at least 6 characters.";
+                isValid = false;
+            }
+
+            // Check if password and confirm password match
+            if (password !== confirmPassword) {
+                confirmPasswordError.innerText = "Passwords do not match.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Registration successful!");
+            }
+        }
+    </script>
+</body>
+</html>

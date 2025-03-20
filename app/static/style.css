@@ -1,0 +1,507 @@
+body {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.login-options {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+button {
+    display: block;
+    width: 300px;
+    margin: 15px auto;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #ff5e62;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #ff5e62;
+    color: white;
+    transform: scale(1.05);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the full viewport height is used */
+}
+
+header {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    text-align: center;
+    padding: 60px 20px; /* Increased padding for a larger header */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.6rem; /* Increased font size */
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-bottom: 40px; 
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+main {
+    flex: 1; /* Allows content to take available space */
+    padding-bottom: 20px; /* Prevent content from overlapping footer */
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between modules */
+    padding: 20px;
+    max-width: 1000px; /* Limits the width to ensure 3 modules per row */
+    margin: 0 auto; /* Centers the modules */
+}
+
+.module {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%; /* Ensures 3 modules fit in one row */
+    min-width: 280px; /* Prevents modules from becoming too small */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.module a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.module:hover {
+    transform: scale(1.05);
+    background: #ffcc80;
+}
+
+.inner-module {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px dashed #ff5722;
+}
+
+.inner-module a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Footer Stays at Bottom */
+footer {
+    width: 100%;
+    background: #333232;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    bottom: 0;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffcc80;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.module {
+    background: white;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.module a {
+    display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+}
+
+.module:hover {
+    transform: scale(1.05);
+    background: #ffcc80;
+}
+
+.inner-module {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px dashed #ff5722;
+}
+
+.inner-module a{
+    display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+}
+
+
+
+footer a:hover {
+    color: #ffcc80;
+}
+/* Dabbawala History Section */
+/* Dabbawala History Section */
+.dabbawala-history {
+    background: url('dabbawala.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 15px;
+    position: relative;
+    max-width: 60%; 
+    height:80% /* Increased Width */
+    margin: auto;
+}
+
+.dabbawala-history::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.history-content {
+    position: relative;
+    z-index: 2;
+    max-width: 80%; /* Increased width */
+    margin: auto;
+}
+
+.history-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.history-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Our Services Section */
+.our-services {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 100%;  /* Increased Width */
+    margin: auto;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Allows responsiveness */
+}
+
+.service-box {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.service-box h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.service-box .counter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+/* Certificate Section */
+.certificate-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 90%; /* Increased width */
+    margin: auto;
+    
+}
+
+.certificate-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.certificate-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+.certificate-box img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    height: auto; 
+}
+
+.certificate-box p {
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+/* Adjusting Positioning */
+.our-services {
+    margin-bottom: 20px; /* Adds space before Certificate */
+}
+
+.certificate-section {
+    margin-bottom: 20px; /* Adds space before Bottom Image */
+}
+
+/* Bottom Image - Below Everything */
+.bottom-image {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 100%;
+}
+footer {
+    width: 100%; /* Ensure it spans the full width */
+    background: #333232;
+    color: white;
+    text-align: center;
+    padding: 15px 20px; /* Increase padding for more height */
+    margin-top: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size: 1rem; /* Increase font size if needed */
+    font-weight: bold;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Extend the width of the curve */
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: auto;
+}
+body {
+    background: linear-gradient(to right, #ff9966,#ff5e62 );
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+.login-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+input {
+    width: 95%;
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+button {
+    width: 412px;
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #ff5e62;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #ff5e62;
+    color: white;
+    transform: scale(1.05);
+}
+.links {
+    margin-top: 15px;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
